@@ -18,8 +18,8 @@ final class Init extends AbstractMigration
         
         $this->insert('user', [
             [
-                'username' => 'alwan',
-                'password' => 123,
+                'username' => 'riyan',
+                'password' => 321,
                 'created_at' => date('Y-m-d'),
             ]
         ]);
