@@ -10,8 +10,8 @@ final class AddTablePost extends AbstractMigration
     {
         $this->table('post')
             ->addColumn('id', 'integer', ['autoincrement' => true])
-            ->addColumn('title', 'string', ['length' => 64])
-            ->addColumn('article', 'string')
+            ->addColumn('title', 'string')
+            ->addColumn('article', 'text')
             ->addColumn('created_at', 'datetime')
             ->addColumn('updated_at', 'datetime', ['null' => true])
             ->create();
@@ -20,6 +20,6 @@ final class AddTablePost extends AbstractMigration
     protected function down(): void
     {
         $this->table('post')
-        ->drop();
+            ->drop();
     }
 }
